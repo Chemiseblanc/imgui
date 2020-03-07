@@ -24,4 +24,4 @@ target_include_directories(imgui
 
 add_subdirectory(examples)
 
-export(TARGETS imgui impl_opengl3 impl_glfw NAMESPACE imgui)
+export(TARGETS imgui impl_opengl3 impl_glfw NAMESPACE imgui:: FILE DearImgui.cmake)
