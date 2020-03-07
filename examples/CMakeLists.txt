@@ -33,4 +33,5 @@ target_link_libraries(imgui_impl_opengl3
         libglew_static
     PRIVATE
         imgui_core
+        OpenGL::GL
 )
