@@ -4,7 +4,7 @@ project(imgui
     LANGUAGES CXX
 )
 
-add_library(imgui STATIC)
+add_library(imgui_core STATIC)
 target_sources(imgui_core
     PUBLIC
         imgui.h
@@ -18,11 +18,11 @@ target_sources(imgui_core
         imstb_textedit.h
         imstb_truetype.h
 )
-target_include_directories(imgui
+target_include_directories(imgui_core
     PUBLIC
         ${CMAKE_CURRENT_SOURCE_DIR}
 )
 
 add_subdirectory(examples)
 
-export(TARGETS imgui impl_opengl3 impl_glfw NAMESPACE imgui:: FILE DearImgui.cmake)
+export(TARGETS imgui_core imgui_impl_opengl3 imgui_impl_glfw NAMESPACE imgui:: FILE DearImgui.cmake)
