@@ -5,10 +5,11 @@ project(imgui
 )
 
 add_library(imgui STATIC)
-target_sources(imgui
+target_sources(imgui_core
     PUBLIC
         imgui.h
         imgui.cpp
+        imconfig.h
     PRIVATE
         imgui_draw.cpp
         imgui_widgets.cpp
@@ -24,4 +25,4 @@ target_include_directories(imgui
 
 add_subdirectory(examples)
 
-export(TARGETS imgui impl_opengl3 impl_glfw NAMESPACE imgui)
+export(TARGETS imgui impl_opengl3 impl_glfw NAMESPACE imgui:: FILE DearImgui.cmake)
