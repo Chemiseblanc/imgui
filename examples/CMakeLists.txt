@@ -11,8 +11,9 @@ target_include_directories(imgui_impl_glfw
         ${CMAKE_CURRENT_SOURCE_DIR}
 )
 target_link_libraries(imgui_impl_glfw
-    PRIVATE
+    PUBLIC
         imgui_core
+    PRIVATE
         glfw
 )
 
@@ -30,8 +31,8 @@ target_include_directories(imgui_impl_opengl3
 )
 target_link_libraries(imgui_impl_opengl3
     PUBLIC
+        imgui_core
         libglew_static
     PRIVATE
-        imgui_core
         OpenGL::GL
 )
