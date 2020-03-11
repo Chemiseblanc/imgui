@@ -10,14 +10,14 @@ target_sources(imgui_core
         imgui.h
         imgui.cpp
         imconfig.h
-    PRIVATE
-        imgui_draw.cpp
-        imgui_widgets.cpp
-        imgui_demo.cpp
         imgui_internal.h
         imstb_rectpack.h
         imstb_textedit.h
         imstb_truetype.h
+    PRIVATE
+        imgui_draw.cpp
+        imgui_widgets.cpp
+        imgui_demo.cpp
 )
 target_include_directories(imgui_core
     PUBLIC
